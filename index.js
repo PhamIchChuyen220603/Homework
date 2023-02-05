@@ -67,11 +67,22 @@ window.addEventListener('resize', function (e) {
 });
 size(); 
 
-// let time = document.getElementsByClassName("container")
 
-// const myTimeout = setTimeout(myGreeting, 5000);
+let arr = ["hello", "world", "yes", "no", "okay"]
+let output = document.getElementById("output");
+let add = document.getElementById("add");
+let score = document.getElementById("score")
+let count = 0;
+function enter(event){
+    if(event.key == "Enter" && add.value == output.innerHTML){
+        count++; 
+        score.innerHTML = count;
+        let index = Math.floor(Math.random()*arr.length);
+        output.innerHTML = arr[index]
+        add.value = "";
+    }
+}
+window.addEventListener("keypress", enter);
 
-// function myStopFunction(){
-//     clearTimeout(myTimeout);
-// }
+
 

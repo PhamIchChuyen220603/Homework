@@ -16,6 +16,7 @@ h1 {
     font-size: 14px;
     font-family: sans-serif;
     margin-bottom: 300px;
+    /* margin-top: 170px; */
 }
 
 .keyboard__row {
@@ -142,18 +143,27 @@ h1 {
     text-align: center;
 }
 
-input {
-    margin: 0 30%;
-    width: 400px;
-    height: 2rem;
-    align-items: center;
-    float: left;
-    margin-left: 270px;
-    margin-top: 150px;
-    /* border-radius: none; */
-}
 .container{
-    color: red;
-    margin-right: 200px;
+    width: 817.5px; 
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
+.container h2{
+    margin: 0;
+}
+
+.container input{
+    /* margin: 0 30%; */
+    width: 400px;
+    height: 2rem;
+    margin-top: 50px;
+    margin-left: 0;
+}
+
+#output{
+    text-align: center;
+    font-size: 30px;
+}
