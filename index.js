@@ -65,5 +65,13 @@ var keyboard = document.querySelector('.keyboard');
 window.addEventListener('resize', function (e) {
     size();
 });
-size();
+size(); 
+
+// let time = document.getElementsByClassName("container")
+
+// const myTimeout = setTimeout(myGreeting, 5000);
+
+// function myStopFunction(){
+//     clearTimeout(myTimeout);
+// }
 

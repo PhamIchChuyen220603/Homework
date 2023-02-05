@@ -152,4 +152,8 @@ input {
     margin-top: 150px;
     /* border-radius: none; */
 }
+.container{
+    color: red;
+    margin-right: 200px;
+}
 
