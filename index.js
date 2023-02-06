@@ -1,4 +1,4 @@
-function getKey (e) {
+function getKey(e) {
     var location = e.location;
     var selector;
     if (location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
@@ -13,7 +13,7 @@ function getKey (e) {
     return document.querySelector(selector);
 }
 
-function pressKey (char) {
+function pressKey(char) {
     var key = document.querySelector('[data-char*="' + char.toUpperCase() + '"]');
     if (!key) {
         return console.warn('No key for', char);
@@ -28,7 +28,7 @@ var h1 = document.querySelector('h1');
 var originalQueue = h1.innerHTML;
 var queue = h1.innerHTML;
 
-function next () {
+function next() {
     var c = queue[0];
     queue = queue.slice(1);
     h1.innerHTML = originalQueue.slice(0, originalQueue.length - queue.length);
@@ -55,7 +55,7 @@ document.body.addEventListener('keyup', function (e) {
     key && key.removeAttribute('data-pressed');
 });
 
-function size () {
+function size() {
     var size = keyboard.parentNode.clientWidth / 90;
     keyboard.style.fontSize = size + 'px';
     console.log(size);
@@ -65,19 +65,22 @@ var keyboard = document.querySelector('.keyboard');
 window.addEventListener('resize', function (e) {
     size();
 });
-size(); 
+size();
 
 
-let arr = ["hello", "world", "yes", "no", "okay"]
+let arr = ["hello", "world", "yes", "no", "okay", "cat", "dog", "laptop", "phone", "shoes", "bag", "watch",
+    "shirt", "motorbike", "floor", "hat", "sneaker", "speed", "tour", "guitar", "singer", "sleep", "run", "talk",
+    "flight", "football", "basketball", "goalkeeper", "freekick", "outside", "inside", "handball", "goal", 
+    "striker", "midfielder", "defender", "referee", "match", "assist", "champion"]
 let output = document.getElementById("output");
 let add = document.getElementById("add");
 let score = document.getElementById("score")
 let count = 0;
-function enter(event){
-    if(event.key == "Enter" && add.value == output.innerHTML){
-        count++; 
+function enter(event) {
+    if (event.key == "Enter" && add.value == output.innerHTML) {
+        count++;
         score.innerHTML = count;
-        let index = Math.floor(Math.random()*arr.length);
+        let index = Math.floor(Math.random() * arr.length);
         output.innerHTML = arr[index]
         add.value = "";
     }
